@@ -1,8 +1,6 @@
 package com.example.audibook.Screens;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.WindowManager;
 
 import androidx.activity.EdgeToEdge;
@@ -13,7 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.audibook.R;
 
-public class SplashScreenActivity extends AppCompatActivity {
+public class OnBoardingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +19,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_on_boarding);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(SplashScreenActivity.this, OnBoardingActivity.class));
-                finish();
-            }
-        },3000);
     }
 }
