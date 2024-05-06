@@ -10,11 +10,12 @@
     tools:context=".Screens.SplashScreenActivity">
 
 <!--    https://lottie.host/61e3479f-725e-4efa-9c74-bd37fd3fffba/LSJfmy9BbT.json-->
+<!--    https://lottie.host/a1c1ad77-414a-4ba2-a7c9-19913c99a8c7/oZRMjhS0p8.json-->
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="140dp"
         android:layout_height="140dp"
-        app:lottie_url="https://lottie.host/61e3479f-725e-4efa-9c74-bd37fd3fffba/LSJfmy9BbT.json"
         app:lottie_autoPlay="true"
-        android:rotation="180"/>
+        android:rotation="180"
+        style="@style/SplashLogo"/>
 
 </LinearLayout>
