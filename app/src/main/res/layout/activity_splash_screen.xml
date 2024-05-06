@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".Screens.SplashScreenActivity">
 
+<!--    https://lottie.host/61e3479f-725e-4efa-9c74-bd37fd3fffba/LSJfmy9BbT.json-->
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="140dp"
         android:layout_height="140dp"

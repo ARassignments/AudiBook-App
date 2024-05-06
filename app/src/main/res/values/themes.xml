@@ -6,4 +6,210 @@
     </style>
 
     <style name="Theme.AudiBook" parent="Base.Theme.AudiBook" />
+
+<!--    Font Family Light-->
+    <style name="light_48">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="light_32">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="light_24">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="light_20">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="light_16">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="light_14">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="light_12">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="light_10">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--    Font Family Regular-->
+    <style name="regular_48">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="regular_32">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="regular_24">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="regular_20">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="regular_16">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="regular_14">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="regular_12">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="regular_10">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--    Font Family Medium-->
+    <style name="medium_48">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="medium_32">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="medium_24">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="medium_20">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="medium_16">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="medium_14">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="medium_12">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="medium_10">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--    Font Family Semi Bold-->
+    <style name="semibold_48">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="semibold_32">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="semibold_24">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="semibold_20">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="semibold_16">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="semibold_14">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="semibold_12">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="semibold_10">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--    Font Family Semi Bold-->
+    <style name="bold_48">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="bold_32">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="bold_24">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="bold_20">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="bold_16">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="bold_14">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="bold_12">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="bold_10">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
 </resources>
