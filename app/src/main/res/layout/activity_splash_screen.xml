@@ -6,6 +6,7 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/ScreenBg"
     tools:context=".Screens.SplashScreenActivity">
 
 <!--    https://lottie.host/61e3479f-725e-4efa-9c74-bd37fd3fffba/LSJfmy9BbT.json-->

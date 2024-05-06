@@ -212,4 +212,12 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="ScreenBg">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="onBoardingBg">
+        <item name="android:src">@drawable/background_pattern</item>
+    </style>
+
 </resources>

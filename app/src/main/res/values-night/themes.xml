@@ -4,4 +4,13 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+
+    <style name="ScreenBg">
+        <item name="android:background">@color/neutral_100</item>
+    </style>
+
+    <style name="onBoardingBg">
+        <item name="android:src">@drawable/background_pattern_dark</item>
+    </style>
 </resources>
