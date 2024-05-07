@@ -16,6 +16,15 @@
         android:theme="@style/Theme.AudiBook"
         tools:targetApi="31">
         <activity
+            android:name=".Screens.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.EmailSentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".Screens.RegisterActivity"
             android:exported="false" />
         <activity

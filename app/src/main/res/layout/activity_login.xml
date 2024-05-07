@@ -59,6 +59,7 @@
             style="@style/flatButton"/>
 
         <TextView
+            android:id="@+id/forgotBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -77,7 +78,35 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginVertical="25dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logos_google"
+                android:layout_weight="1"
+                style="@style/outlineButton"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logos_facebook"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="20dp"
+                style="@style/outlineButton"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logos_twitter"
+                android:layout_weight="1"
+                style="@style/outlineButton"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center">
 
             <TextView

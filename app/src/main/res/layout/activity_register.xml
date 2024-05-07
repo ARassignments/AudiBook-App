@@ -76,8 +76,45 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Terms"
+                android:text=" Terms &amp; Condition"
                 style="@style/authLink"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=","
+                style="@style/authLabel"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Policy"
+                style="@style/authLink"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" and "
+                style="@style/authLabel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cookies Policy"
+                style="@style/authLink"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                style="@style/authLabel"/>
 
         </LinearLayout>
         
@@ -89,18 +126,12 @@
             style="@style/flatButton"/>
 
         <Button
+            android:id="@+id/cancelBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:layout_marginTop="16dp"
             style="@style/outlineButton"/>
-
-
-
-
-
-
-
 
     </LinearLayout>
 

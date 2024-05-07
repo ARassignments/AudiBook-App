@@ -19,6 +19,144 @@
         <item name="lottie_url">https://lottie.host/a1c1ad77-414a-4ba2-a7c9-19913c99a8c7/oZRMjhS0p8.json</item>
     </style>
 
+    <!--    Buttons-->
+
+    <style name="flatButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_flat_bg</item>
+        <item name="android:backgroundTint">@color/primary_50</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="outlineButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_outline_bg_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="ghostButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_outline_bg_dark</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="flatButtonDisabled">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_flat_bg</item>
+        <item name="android:backgroundTint">@color/primary_50</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
+    <style name="outlineButtonDisabled">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_outline_bg_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
+    <style name="ghostButtonDisabled">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_outline_bg_dark</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
+    <!--    Icon Buttons-->
+
+    <style name="flatIconButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_flat_bg</item>
+        <item name="android:backgroundTint">@color/primary_50</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableTint">@color/white</item>
+    </style>
+
+    <style name="outlineIconButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_outline_bg_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableTint">@color/primary_50</item>
+    </style>
+
+    <style name="ghostIconButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_outline_bg_dark</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableTint">@color/primary_50</item>
+    </style>
+
+    <style name="flatIconButtonDisabled">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_flat_bg</item>
+        <item name="android:backgroundTint">@color/primary_50</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableTint">@color/white</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
+    <style name="outlineIconButtonDisabled">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_outline_bg_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableTint">@color/primary_50</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
+    <style name="ghostIconButtonDisabled">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/buttons_outline_bg_dark</item>
+        <item name="android:backgroundTint">@color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableTint">@color/primary_50</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
     <!--    Input Field-->
 
     <style name="inputText">
@@ -65,6 +203,10 @@
         <item name="android:tint">@color/white</item>
     </style>
 
+    <style name="horizontalRow">
+        <item name="android:background">@color/neutral_80</item>
+    </style>
+
     <!--    Authentications-->
 
     <style name="authLogo">
@@ -88,6 +230,26 @@
         <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--    Welcome-->
+
+    <style name="welcomeLabel">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_20</item>
+    </style>
+
+    <style name="welcomeTitle">
+        <item name="android:fontFamily">@font/poppins_thin</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="welcomeContent">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/primary_20</item>
     </style>
 
 </resources>

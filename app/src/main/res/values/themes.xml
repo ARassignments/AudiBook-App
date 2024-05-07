@@ -410,6 +410,10 @@
         <item name="android:tint">@color/neutral_80</item>
     </style>
 
+    <style name="horizontalRow">
+        <item name="android:background">@color/primary_5</item>
+    </style>
+
 <!--    Authentications-->
 
     <style name="authLogo">
@@ -436,6 +440,26 @@
     </style>
 
     <style name="authLabel">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+    
+<!--    Welcome-->
+    
+    <style name="welcomeLabel">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/accent_50</item>
+    </style>
+
+    <style name="welcomeTitle">
+        <item name="android:fontFamily">@font/poppins_thin</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:textColor">@color/primary_50</item>
+    </style>
+
+    <style name="welcomeContent">
         <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/neutral_80</item>
