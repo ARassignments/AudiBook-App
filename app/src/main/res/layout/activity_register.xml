@@ -2,10 +2,10 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ScreenBg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Screens.LoginActivity"
-    style="@style/ScreenBg">
+    tools:context=".Screens.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,9 +22,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login to Your Account"
+            android:text="Register"
             android:layout_marginTop="20dp"
             style="@style/authTitle"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:layout_marginTop="16dp"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            style="@style/inputText"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -38,63 +47,60 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="Create Password"
             android:layout_marginTop="16dp"
             android:inputType="textPassword"
             android:maxLength="20"
             style="@style/inputText"/>
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Remember me"
-            style="@style/authCheckbox"/>
-
-        <Button
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:hint="Confirm Password"
             android:layout_marginTop="16dp"
-            style="@style/flatButton"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Forgot Password?"
-            android:layout_gravity="right"
-            style="@style/authLink"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Or login with"
-            android:layout_gravity="center"
-            style="@style/authLabel"/>
+            android:inputType="textPassword"
+            android:maxLength="20"
+            style="@style/inputText"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center">
+            android:layout_marginTop="16dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don’t have an accoun’t ?"
+                android:text="By signing up, you agree to our"
                 style="@style/authLabel"/>
 
             <TextView
-                android:id="@+id/registerBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Register"
-                android:layout_marginLeft="5dp"
+                android:text=" Terms"
                 style="@style/authLink"/>
 
         </LinearLayout>
+        
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginTop="16dp"
+            style="@style/flatButton"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_marginTop="16dp"
+            style="@style/outlineButton"/>
+
+
+
+
+
+
+
 
     </LinearLayout>
 
