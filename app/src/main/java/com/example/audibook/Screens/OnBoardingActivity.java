@@ -1,6 +1,8 @@
 package com.example.audibook.Screens;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +22,20 @@ public class OnBoardingActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_on_boarding);
+
+        findViewById(R.id.skipBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OnBoardingActivity.this, ErrorActivity.class));
+            }
+        });
+
+        findViewById(R.id.nextBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OnBoardingActivity.this, LoginActivity.class));
+            }
+        });
 
     }
 }
