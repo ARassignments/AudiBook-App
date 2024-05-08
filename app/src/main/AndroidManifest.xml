@@ -16,6 +16,12 @@
         android:theme="@style/Theme.AudiBook"
         tools:targetApi="31">
         <activity
+            android:name=".Screens.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.FinishActivity"
+            android:exported="false" />
+        <activity
             android:name=".Screens.WelcomeActivity"
             android:exported="false" />
         <activity
