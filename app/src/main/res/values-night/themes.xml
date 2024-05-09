@@ -307,5 +307,23 @@
         <item name="android:drawablePadding">8dp</item>
     </style>
 
+    <style name="dashboardBestsellerTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="dashboardBestsellerAuther">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/neutral_10</item>
+    </style>
+
+    <style name="dashboardReleaseTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_5</item>
+    </style>
+
 
 </resources>
