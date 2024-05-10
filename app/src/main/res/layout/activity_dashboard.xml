@@ -169,6 +169,7 @@
                 style="@style/dashboardTitle"/>
 
             <TextView
+                android:id="@+id/seeMoreBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="See more"
