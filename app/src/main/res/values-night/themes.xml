@@ -2,7 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.AudiBook" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+         <item name="colorPrimary">@color/primary_50</item>
+        <item name="android:statusBarColor">@color/accent_50</item>
     </style>
 
     <!--    Mode-->
@@ -325,5 +326,55 @@
         <item name="android:textColor">@color/neutral_5</item>
     </style>
 
+    <style name="dashboardReleaseAuther">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/neutral_10</item>
+    </style>
+
+    <!--    Settings-->
+
+    <style name="settingsItems">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_5</item>
+    </style>
+
+    <style name="usernameTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="viewProfileBtn">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primary_20</item>
+    </style>
+
+
+    <!--    Subscribe-->
+
+    <style name="subscribeTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="subscribeDesc">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_5</item>
+    </style>
+
+    <style name="subscribeLabel">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_20</item>
+    </style>
+
+    <style name="subscribePlatform">
+        <item name="android:src">@drawable/device_dark</item>
+    </style>
 
 </resources>
