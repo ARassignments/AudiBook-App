@@ -16,6 +16,7 @@
         android:layout_height="140dp"
         app:lottie_autoPlay="true"
         android:rotation="180"
-        style="@style/SplashLogo"/>
+        style="@style/SplashLogo"
+        tools:ignore="MissingClass" />
 
 </LinearLayout>
