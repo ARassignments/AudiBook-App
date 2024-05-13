@@ -13,26 +13,26 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.audibook.R;
 
-public class DashboardActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.activity_settings);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        findViewById(R.id.seeMoreBtn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.backBtn).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DashboardActivity.this, SeeMoreActivity.class));
+            public void onClick(View v) {
+                SettingsActivity.super.onBackPressed();
             }
         });
 
-        findViewById(R.id.settingsBtn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.subscriptionBtn).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(DashboardActivity.this, SettingsActivity.class));
+            public void onClick(View v) {
+                startActivity(new Intent(SettingsActivity.this, SubscriptionActivity.class));
             }
         });
     }
