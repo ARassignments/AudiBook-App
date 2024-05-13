@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "414445353774",
+    "project_id": "audibook-ef5b9",
+    "storage_bucket": "audibook-ef5b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414445353774:android:8cafce8d2e638828b698bf",
+        "android_client_info": {
+          "package_name": "com.example.audibook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4-R3ETZrjwSUwP6J51tX9PttNcS0lCVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

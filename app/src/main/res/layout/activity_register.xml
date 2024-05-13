@@ -36,6 +36,7 @@
             style="@style/inputText"/>
 
         <EditText
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -45,6 +46,7 @@
             style="@style/inputText"/>
 
         <EditText
+            android:id="@+id/pwdInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Create Password"
@@ -119,6 +121,7 @@
         </LinearLayout>
         
         <Button
+            android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Register"
