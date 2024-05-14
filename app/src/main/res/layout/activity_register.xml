@@ -27,6 +27,7 @@
             style="@style/authTitle"/>
 
         <EditText
+            android:id="@+id/nameInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full Name"
@@ -36,6 +37,7 @@
             style="@style/inputText"/>
 
         <EditText
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -45,6 +47,7 @@
             style="@style/inputText"/>
 
         <EditText
+            android:id="@+id/pwdInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Create Password"
@@ -54,6 +57,7 @@
             style="@style/inputText"/>
 
         <EditText
+            android:id="@+id/cpwdInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirm Password"
@@ -117,8 +121,18 @@
                 style="@style/authLabel"/>
 
         </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            style="@style/loaderTint"/>
         
         <Button
+            android:id="@+id/registerBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Register"
