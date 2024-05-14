@@ -1,14 +1,20 @@
 package com.example.audibook.Screens;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -204,14 +210,39 @@ public class RegisterActivity extends AppCompatActivity {
         if((nameErr && emailErr && pwdErr && cpwdErr) == true){
             loader.setVisibility(View.VISIBLE);
             registerBtn.setVisibility(View.GONE);
+            Dialog dialog = new Dialog(RegisterActivity.this);
+            dialog.setContentView(R.layout.dialog_loading);
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            dialog.setCanceledOnTouchOutside(false);
+            dialog.setCancelable(false);
+            TextView msg = dialog.findViewById(R.id.msgDialog);
+            msg.setText("Loading...");
+            dialog.show();
             FirebaseAuth auth = FirebaseAuth.getInstance();
-//            auth.createUserWithEmailAndPassword(emailInput.getText().toString(),pwdInput.getText().toString())
-//                    .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-//                        @Override
-//                        public void onSuccess(AuthResult authResult) {
-//
-//                        }
-//                    });
+            auth.createUserWithEmailAndPassword(emailInput.getText().toString(),pwdInput.getText().toString())
+                    .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+                        @Override
+                        public void onSuccess(AuthResult authResult) {
+                            dialog.dismiss();
+                            Dialog dialog = new Dialog(RegisterActivity.this);
+                            dialog.setContentView(R.layout.dialog_success);
+                            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                            dialog.setCanceledOnTouchOutside(false);
+                            dialog.setCancelable(false);
+                            TextView msg = dialog.findViewById(R.id.msgDialog);
+                            msg.setText("Account Created Successfully!!!");
+                            dialog.show();
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    dialog.dismiss();
+                                    RegisterActivity.super.onBackPressed();
+                                }
+                            },3000);
+                        }
+                    });
         }
     }
 
