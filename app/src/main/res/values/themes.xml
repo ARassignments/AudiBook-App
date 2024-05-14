@@ -445,6 +445,10 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/neutral_80</item>
     </style>
+
+    <style name="loaderTint">
+        <item name="android:indeterminateTint">@color/primary_50</item>
+    </style>
     
 <!--    Welcome-->
     
