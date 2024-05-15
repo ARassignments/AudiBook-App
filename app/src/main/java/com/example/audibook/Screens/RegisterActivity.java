@@ -26,7 +26,14 @@ import com.example.audibook.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -219,11 +226,36 @@ public class RegisterActivity extends AppCompatActivity {
             TextView msg = dialog.findViewById(R.id.msgDialog);
             msg.setText("Loading...");
             dialog.show();
+
+            // Declare Firebase Authentication Object
             FirebaseAuth auth = FirebaseAuth.getInstance();
+            // Create User into Firebase Authentication
             auth.createUserWithEmailAndPassword(emailInput.getText().toString(),pwdInput.getText().toString())
                     .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override
                         public void onSuccess(AuthResult authResult) {
+                            // Get UID from Firebase Authentication
+                            String userId = auth.getCurrentUser().getUid();
+
+                            // Create a SimpleDateFormat object with the desired format.
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd-MMMM-yyyy", Locale.getDefault());
+
+                            // Format the date to a string
+                            String currentDate = sdf.format(new Date());
+
+                            // Create Object by HashMap
+                            DatabaseReference myRef = FirebaseDatabase.getInstance().getReference();
+                            HashMap<String,String> obj = new HashMap<String,String>();
+                            obj.put("name",nameInput.getText().toString().trim());
+                            obj.put("email",auth.getCurrentUser().getEmail());
+                            obj.put("image","");
+                            obj.put("role","user");
+                            obj.put("created_on",currentDate);
+                            obj.put("status","1");
+
+                            // Upload Data into Realtime Database
+                            myRef.child("Users").child(userId).setValue(obj);
+
                             dialog.dismiss();
                             Dialog dialog = new Dialog(RegisterActivity.this);
                             dialog.setContentView(R.layout.dialog_success);
