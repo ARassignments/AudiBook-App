@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Patterns;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -24,6 +25,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.audibook.MainActivity;
 import com.example.audibook.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -104,68 +106,86 @@ public class ForgetPasswordActivity extends AppCompatActivity {
     }
 
     public void validation(){
-        boolean emailErr = false;
-        emailErr = emailValidation();
-        if((emailErr) == true){
-            loader.setVisibility(View.VISIBLE);
-            submitBtn.setVisibility(View.GONE);
-            Dialog dialog = new Dialog(ForgetPasswordActivity.this);
-            dialog.setContentView(R.layout.dialog_loading);
-            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            dialog.setCanceledOnTouchOutside(false);
-            dialog.setCancelable(false);
-            TextView msg = dialog.findViewById(R.id.msgDialog);
-            msg.setText("Loading...");
-            dialog.show();
+        if(MainActivity.connectionCheck(ForgetPasswordActivity.this)){
+            boolean emailErr = false;
+            emailErr = emailValidation();
+            if((emailErr) == true){
+                loader.setVisibility(View.VISIBLE);
+                submitBtn.setVisibility(View.GONE);
+                Dialog dialog = new Dialog(ForgetPasswordActivity.this);
+                dialog.setContentView(R.layout.dialog_loading);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+                dialog.getWindow().setGravity(Gravity.CENTER);
+                dialog.setCancelable(false);
+                TextView msg = dialog.findViewById(R.id.msgDialog);
+                msg.setText("Loading...");
+                dialog.show();
 
-            // Declare Firebase Authentication Object
-            FirebaseAuth auth = FirebaseAuth.getInstance();
-            // Check User in Firebase Authentication
-            auth.fetchSignInMethodsForEmail(emailInput.getText().toString().trim())
-                    .addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
-                            if(task.isSuccessful()){
-                                if(task.getResult().getSignInMethods().isEmpty()){
-                                    // Email not registered
-                                    dialog.dismiss();
-                                    Dialog dialog = new Dialog(ForgetPasswordActivity.this);
-                                    dialog.setContentView(R.layout.dialog_error);
-                                    dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                                    dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                                    dialog.setCanceledOnTouchOutside(false);
-                                    dialog.setCancelable(false);
-                                    TextView msg = dialog.findViewById(R.id.msgDialog);
-                                    msg.setText("Your Email Is Not Exist!!!");
-                                    dialog.show();
-                                    new Handler().postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            dialog.dismiss();
-                                            loader.setVisibility(View.GONE);
-                                            submitBtn.setVisibility(View.VISIBLE);
-                                        }
-                                    },4000);
-                                } else {
-                                    // Email already registered
-                                    // Send Forgot Password Email By Firebase Authentication
-                                    auth.sendPasswordResetEmail(emailInput.getText().toString().trim())
-                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                                @Override
-                                                public void onSuccess(Void unused) {
-                                                    dialog.dismiss();
-                                                    startActivity(new Intent(ForgetPasswordActivity.this, EmailSentActivity.class));
-                                                    finish();
-                                                }
-                                            });
-                                }
+                // Declare Firebase Authentication Object
+                FirebaseAuth auth = FirebaseAuth.getInstance();
+
+                // Send Forgot Password Email By Firebase Authentication
+                auth.sendPasswordResetEmail(emailInput.getText().toString().trim())
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+                                dialog.dismiss();
+                                startActivity(new Intent(ForgetPasswordActivity.this, EmailSentActivity.class));
+                                finish();
                             }
-                        }
-                    });
+                        });
+
+//                // Check User in Firebase Authentication
+//                auth.fetchSignInMethodsForEmail(emailInput.getText().toString().trim())
+//                        .addOnCompleteListener(new OnCompleteListener<SignInMethodQueryResult>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<SignInMethodQueryResult> task) {
+//                                if(task.isSuccessful()){
+//                                    if(task.getResult().getSignInMethods().isEmpty()){
+//                                        // Email not registered
+//                                        dialog.dismiss();
+//                                        Dialog dialog = new Dialog(ForgetPasswordActivity.this);
+//                                        dialog.setContentView(R.layout.dialog_error);
+//                                        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//                                        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//                                        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+//                                        dialog.getWindow().setGravity(Gravity.CENTER);
+//                                        dialog.setCanceledOnTouchOutside(false);
+//                                        dialog.setCancelable(false);
+//                                        TextView msg = dialog.findViewById(R.id.msgDialog);
+//                                        msg.setText("Your Email Is Not Exist!!!");
+//                                        dialog.show();
+//                                        new Handler().postDelayed(new Runnable() {
+//                                            @Override
+//                                            public void run() {
+//                                                dialog.dismiss();
+//                                                loader.setVisibility(View.GONE);
+//                                                submitBtn.setVisibility(View.VISIBLE);
+//                                            }
+//                                        },4000);
+//                                    } else {
+//                                        // Email already registered
+//                                        // Send Forgot Password Email By Firebase Authentication
+//                                        auth.sendPasswordResetEmail(emailInput.getText().toString().trim())
+//                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                                    @Override
+//                                                    public void onSuccess(Void unused) {
+//                                                        dialog.dismiss();
+//                                                        startActivity(new Intent(ForgetPasswordActivity.this, EmailSentActivity.class));
+//                                                        finish();
+//                                                    }
+//                                                });
+//                                    }
+//                                }
+//                            }
+//                        });
 
 
 
+            }
         }
     }
 }
