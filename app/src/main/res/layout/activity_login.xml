@@ -27,6 +27,7 @@
             style="@style/authTitle"/>
 
         <EditText
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
@@ -36,6 +37,7 @@
             style="@style/inputText"/>
 
         <EditText
+            android:id="@+id/pwdInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -45,11 +47,21 @@
             style="@style/inputText"/>
 
         <CheckBox
+            android:id="@+id/rememberMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Remember me"
             style="@style/authCheckbox"/>
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            style="@style/loaderTint"/>
 
         <Button
             android:id="@+id/loginBtn"

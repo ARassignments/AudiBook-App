@@ -17,12 +17,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.audibook.R;
+import com.google.android.gms.tasks.OnCanceledListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -272,7 +275,30 @@ public class RegisterActivity extends AppCompatActivity {
                                     dialog.dismiss();
                                     RegisterActivity.super.onBackPressed();
                                 }
-                            },3000);
+                            },4000);
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            dialog.dismiss();
+                            Dialog dialog = new Dialog(RegisterActivity.this);
+                            dialog.setContentView(R.layout.dialog_error);
+                            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                            dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                            dialog.setCanceledOnTouchOutside(false);
+                            dialog.setCancelable(false);
+                            TextView msg = dialog.findViewById(R.id.msgDialog);
+                            msg.setText("Your Email Already Exist!!!");
+                            dialog.show();
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    dialog.dismiss();
+                                    loader.setVisibility(View.GONE);
+                                    registerBtn.setVisibility(View.VISIBLE);
+                                }
+                            },4000);
                         }
                     });
         }

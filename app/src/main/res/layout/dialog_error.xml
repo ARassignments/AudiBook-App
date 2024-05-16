@@ -20,7 +20,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             app:lottie_autoPlay="true"
-            app:lottie_rawRes="@raw/success"
+            app:lottie_rawRes="@raw/error"
             android:layout_marginRight="16dp"/>
 
         <TextView
