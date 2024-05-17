@@ -160,6 +160,7 @@
             style="@style/horizontalRow"/>
 
         <Button
+            android:id="@+id/logoutBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Log Out"
