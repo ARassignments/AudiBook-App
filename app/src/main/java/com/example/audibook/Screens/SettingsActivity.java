@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +15,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.audibook.MainActivity;
 import com.example.audibook.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SettingsActivity extends AppCompatActivity {
 
     Button logoutBtn;
+    TextView profileName;
+    LinearLayout adminOptions;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     @Override
@@ -30,8 +35,18 @@ public class SettingsActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         logoutBtn = findViewById(R.id.logoutBtn);
+        adminOptions = findViewById(R.id.adminOptions);
+        profileName = findViewById(R.id.profileName);
+
         sharedPreferences = getSharedPreferences("myData",MODE_PRIVATE);
         editor = sharedPreferences.edit();
+
+
+        MainActivity.checkStatus(SettingsActivity.this);
+        profileName.setText(MainActivity.getName());
+        if(MainActivity.getRole().equals("admin")){
+            adminOptions.setVisibility(View.VISIBLE);
+        }
 
         findViewById(R.id.backBtn).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +59,13 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SettingsActivity.this, SubscriptionActivity.class));
+            }
+        });
+
+        findViewById(R.id.usersBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SettingsActivity.this, UsersActivity.class));
             }
         });
 

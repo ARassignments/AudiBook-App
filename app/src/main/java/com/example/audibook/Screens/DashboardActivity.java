@@ -12,6 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.audibook.MainActivity;
 import com.example.audibook.R;
 
 public class DashboardActivity extends AppCompatActivity {
@@ -28,6 +29,8 @@ public class DashboardActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("myData",MODE_PRIVATE);
         editor = sharedPreferences.edit();
+
+        MainActivity.checkStatus(DashboardActivity.this);
 
         if(!sharedPreferences.contains("loginStatus")){
             startActivity(new Intent(DashboardActivity.this, LoginActivity.class));
