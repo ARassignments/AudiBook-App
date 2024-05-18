@@ -199,7 +199,7 @@
                     android:layout_width="200dp"
                     android:layout_height="300dp"
                     android:layout_marginRight="16dp"
-                    android:src="@drawable/dashboard_img_2"/>
+                    android:src="@drawable/dashboard_img_2" />
 
                 <ImageView
                     android:layout_width="200dp"
@@ -275,7 +275,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Laurie Forest"
+                            android:text="LaurieForest"
                             android:layout_marginBottom="20dp"
                             style="@style/dashboardBestsellerAuther"/>
 
@@ -332,16 +332,16 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    style="@style/customButton"
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
-                    android:padding="12dp"
                     android:layout_marginRight="30dp"
-                    style="@style/customButton">
+                    android:padding="12dp">
 
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="120dp"
-                        android:src="@drawable/dashboard_bestseller_img"/>
+                        android:src="@drawable/dashboard_bestseller_img" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -351,17 +351,17 @@
                         android:orientation="vertical">
 
                         <TextView
+                            style="@style/dashboardBestsellerTitle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Light Mage"
-                            style="@style/dashboardBestsellerTitle"/>
+                            android:text="Light Mage" />
 
                         <TextView
+                            style="@style/dashboardBestsellerAuther"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Laurie Forest"
                             android:layout_marginBottom="20dp"
-                            style="@style/dashboardBestsellerAuther"/>
+                            android:text="Laurie Forest" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -370,46 +370,46 @@
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/star"
                                 android:layout_marginRight="8dp"
-                                app:tint="@color/accent_50"/>
+                                android:src="@drawable/star"
+                                app:tint="@color/accent_50" />
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/star"
                                 android:layout_marginRight="8dp"
-                                app:tint="@color/accent_50"/>
+                                android:src="@drawable/star"
+                                app:tint="@color/accent_50" />
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/star"
                                 android:layout_marginRight="8dp"
-                                app:tint="@color/accent_50"/>
+                                android:src="@drawable/star"
+                                app:tint="@color/accent_50" />
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/star"
                                 android:layout_marginRight="8dp"
-                                app:tint="@color/accent_50"/>
+                                android:src="@drawable/star"
+                                app:tint="@color/accent_50" />
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
+                                android:layout_marginRight="8dp"
                                 android:src="@drawable/star_outline"
-                                android:layout_marginRight="8dp"
-                                app:tint="@color/accent_50"/>
+                                app:tint="@color/accent_50" />
 
                         </LinearLayout>
 
                         <TextView
+                            style="@style/dashboardBestsellerAuther"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1,000+ Listeners"
                             android:layout_marginTop="8dp"
-                            style="@style/dashboardBestsellerAuther"/>
+                            android:text="1,000+ Listeners" />
 
                     </LinearLayout>
 
@@ -479,19 +479,12 @@
                     android:orientation="vertical"
                     android:layout_marginRight="12dp">
 
-                    <ImageView
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:src="@drawable/release_img_2"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="The Prisoner’s Key"
-                        style="@style/dashboardReleaseTitle"/>
-
                 </LinearLayout>
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/release_img_2" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -533,6 +526,13 @@
                         style="@style/dashboardReleaseTitle"/>
 
                 </LinearLayout>
+
+                <TextView
+                    style="@style/dashboardReleaseTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="The Prisoner’s Key" />
 
             </LinearLayout>
 
