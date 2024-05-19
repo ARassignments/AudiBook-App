@@ -22,10 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SettingsActivity extends AppCompatActivity {
 
     Button logoutBtn;
-    TextView profileName;
-    LinearLayout adminOptions;
-    SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,14 +32,6 @@ public class SettingsActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        logoutBtn = findViewById(R.id.logoutBtn);
-        adminOptions = findViewById(R.id.adminOptions);
-        profileName = findViewById(R.id.profileName);
-
-        sharedPreferences = getSharedPreferences("myData",MODE_PRIVATE);
-        editor = sharedPreferences.edit();
-
-
         MainActivity.checkStatus(SettingsActivity.this);
         profileName.setText(MainActivity.getName());
         if(MainActivity.getRole().equals("admin")){
@@ -49,6 +39,19 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         findViewById(R.id.backBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        = findViewById(R.id.logoutBtn);
+        adminOptions = findViewById(R.id.adminOptions);
+        profileName = findViewById(R.id.profileName);
+
+        sharedPreferences = getSharedPreferences("myData",MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+
+        View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SettingsActivity.super.onBackPressed();

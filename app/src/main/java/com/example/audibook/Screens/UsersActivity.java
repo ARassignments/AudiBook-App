@@ -45,8 +45,8 @@ public class UsersActivity extends AppCompatActivity {
         UID = sharedPreferences.getString("UID","").toString();
         MainActivity.db.child("Users").addValueEventListener(new ValueEventListener() {
 
-            @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                @Override
                 if(snapshot.exists()){
                     dataList.clear();
                     for(DataSnapshot dd : snapshot.getChildren()){
