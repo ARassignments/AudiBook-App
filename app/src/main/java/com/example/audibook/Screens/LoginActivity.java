@@ -50,7 +50,6 @@ import java.util.Set;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText emailInput, pwdInput;
     Button loginBtn;
     CheckBox rememberMe;
     ProgressBar loader;
