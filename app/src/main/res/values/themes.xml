@@ -8,6 +8,15 @@
 
     <style name="Theme.AudiBook" parent="Base.Theme.AudiBook" />
 
+    <!-- Light Theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Other theme attributes -->
+        <item name="bottomNavCheckedIconTint">@color/bottom_nav_checked_icon_light</item>
+        <item name="bottomNavUncheckedIconTint">@color/bottom_nav_unchecked_icon_light</item>
+        <item name="bottomNavCheckedTitleColor">@color/bottom_nav_checked_title_light</item>
+        <item name="bottomNavUncheckedTitleColor">@color/bottom_nav_unchecked_title_light</item>
+    </style>
+
 <!--    Font Family Light-->
     <style name="light_48">
         <item name="android:fontFamily">@font/poppins_light</item>
@@ -376,6 +385,16 @@
         <item name="android:fontFamily">@font/poppins_medium</item>
     </style>
 
+<!--    Bottom Navigation Bar-->
+
+    <style name="BottomNavigationViewTextStyleActive">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
 <!--    OnBoarding-->
 
     <style name="onBoardingImg1">
@@ -555,6 +574,23 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/primary_50</item>
     </style>
+
+    <style name="dashboardGrandTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="dashboardCustomButtonText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
+    <style name="dashboardCustomButtonIcon">
+        <item name="android:tint">@color/neutral_80</item>
+    </style>
+
 
 <!--    Settings-->
 

@@ -43,6 +43,32 @@
         android:layout_height="1dp"
         style="@style/horizontalRow"/>
 
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Name Here..."
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        style="@style/inputText" />
+
+    <LinearLayout
+        android:id="@+id/loader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:rotation="180"
+            style="@style/SplashLogo"/>
+
+    </LinearLayout>
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -50,6 +76,7 @@
         android:layout_weight="1"
         android:divider="@null"
         android:dividerHeight="0dp"
+        android:visibility="gone"
         tools:listitem="@layout/users_custom_listview"/>
 
 </LinearLayout>

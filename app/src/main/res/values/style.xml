@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Light Theme -->
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light">-->
+<!--        &lt;!&ndash; Other theme attributes &ndash;&gt;-->
+<!--        <item name="bottomNavCheckedIconTint">@color/bottom_nav_checked_icon_light</item>-->
+<!--        <item name="bottomNavUncheckedIconTint">@color/bottom_nav_unchecked_icon_light</item>-->
+<!--        <item name="bottomNavCheckedTitleColor">@color/bottom_nav_checked_title_light</item>-->
+<!--        <item name="bottomNavUncheckedTitleColor">@color/bottom_nav_unchecked_title_light</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Dark Theme &ndash;&gt;-->
+<!--    <style name="AppTheme.Dark" parent="Theme.AppCompat">-->
+<!--        &lt;!&ndash; Other theme attributes &ndash;&gt;-->
+<!--        <item name="bottomNavCheckedIconTint">@color/bottom_nav_checked_icon_dark</item>-->
+<!--        <item name="bottomNavUncheckedIconTint">@color/bottom_nav_unchecked_icon_dark</item>-->
+<!--        <item name="bottomNavCheckedTitleColor">@color/bottom_nav_checked_title_dark</item>-->
+<!--        <item name="bottomNavUncheckedTitleColor">@color/bottom_nav_unchecked_title_dark</item>-->
+<!--    </style>-->
+
+</resources>

@@ -2,8 +2,17 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.AudiBook" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Customize your dark theme here. -->
-         <item name="colorPrimary">@color/primary_50</item>
+         <item name="colorPrimary">@color/white</item>
         <item name="android:statusBarColor">@color/accent_50</item>
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        <!-- Other theme attributes -->
+        <item name="bottomNavCheckedIconTint">@color/bottom_nav_checked_icon_dark</item>
+        <item name="bottomNavUncheckedIconTint">@color/bottom_nav_unchecked_icon_dark</item>
+        <item name="bottomNavCheckedTitleColor">@color/bottom_nav_checked_title_dark</item>
+        <item name="bottomNavUncheckedTitleColor">@color/bottom_nav_unchecked_title_dark</item>
     </style>
 
     <!--    Mode-->
@@ -334,6 +343,22 @@
         <item name="android:fontFamily">@font/poppins_regular</item>
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@color/neutral_10</item>
+    </style>
+
+    <style name="dashboardGrandTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/neutral_5</item>
+    </style>
+
+    <style name="dashboardCustomButtonText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="dashboardCustomButtonIcon">
+        <item name="android:tint">@color/white</item>
     </style>
 
     <!--    Settings-->
