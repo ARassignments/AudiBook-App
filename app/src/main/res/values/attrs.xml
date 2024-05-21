@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bottomNavCheckedIconTint" format="color"/>
+    <attr name="bottomNavUncheckedIconTint" format="color"/>
+    <attr name="bottomNavCheckedTitleColor" format="color"/>
+    <attr name="bottomNavUncheckedTitleColor" format="color"/>
+</resources>
