@@ -437,6 +437,12 @@
         <item name="android:tint">@color/neutral_80</item>
     </style>
 
+    <style name="appBarText">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_50</item>
+    </style>
+
     <style name="horizontalRow">
         <item name="android:background">@color/primary_5</item>
     </style>
@@ -600,6 +606,12 @@
         <item name="android:textColor">@color/neutral_80</item>
     </style>
 
+    <style name="settingsItemsTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
     <style name="logoutButton">
         <item name="android:textAllCaps">false</item>
         <item name="android:background">@drawable/buttons_logout_bg</item>
@@ -642,6 +654,37 @@
 
     <style name="subscribePlatform">
         <item name="android:src">@drawable/device</item>
+    </style>
+
+<!--    Detail Page-->
+    <style name="detailBookTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="detailBookAuther">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_50</item>
+    </style>
+
+    <style name="detailBookRatingText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/neutral_50</item>
+    </style>
+
+    <style name="detailBookSubTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
+    <style name="detailBookContent">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_60</item>
     </style>
 
 </resources>

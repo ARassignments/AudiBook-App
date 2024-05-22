@@ -78,6 +78,13 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.viewProfileBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SettingsActivity.this, ProfileActivity.class));
+            }
+        });
+
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
