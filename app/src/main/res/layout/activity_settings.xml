@@ -67,6 +67,7 @@
                 android:layout_gravity="center">
 
                 <TextView
+                    android:id="@+id/profileName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="AR Assignments"
@@ -110,6 +111,45 @@
             android:paddingVertical="16dp"
             android:paddingHorizontal="32dp"
             style="@style/settingsItems"/>
+
+        <LinearLayout
+            android:id="@+id/adminOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                style="@style/horizontalRow"/>
+
+            <TextView
+                android:id="@+id/booksBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Books"
+                android:layout_marginTop="2dp"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="32dp"
+                style="@style/settingsItems"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                style="@style/horizontalRow"/>
+
+            <TextView
+                android:id="@+id/usersBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Users"
+                android:layout_marginTop="2dp"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="32dp"
+                style="@style/settingsItems"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -160,6 +200,7 @@
             style="@style/horizontalRow"/>
 
         <Button
+            android:id="@+id/logoutBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Log Out"

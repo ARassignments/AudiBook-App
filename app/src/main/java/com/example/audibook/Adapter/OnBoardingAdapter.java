@@ -1,7 +1,7 @@
 package com.example.audibook.Adapter;
 
-
-import android.content.res.Configuration;
+import
+ android.content.res.Configuration;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;

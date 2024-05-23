@@ -1,5 +1,4 @@
-<set xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fillAfter="true"
+cc    android:fillAfter="true"
     android:interpolator="@android:anim/linear_interpolator" >
 
     

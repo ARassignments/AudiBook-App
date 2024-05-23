@@ -2,6 +2,7 @@ package com.example.audibook.Screens;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -43,13 +45,17 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText emailInput, pwdInput;
     Button loginBtn;
     CheckBox rememberMe;
     ProgressBar loader;
+
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +64,14 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        sharedPreferences = getSharedPreferences("myData",MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        if(sharedPreferences.getString("loginStatus","").equals("true")){
+            startActivity(new Intent(LoginActivity.this, WelcomeActivity.class));
+            finish();
+        }
 
         emailInput = findViewById(R.id.emailInput);
         pwdInput = findViewById(R.id.pwdInput);
@@ -170,6 +184,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 // Declare Firebase Authentication Object
                 FirebaseAuth auth = FirebaseAuth.getInstance();
+
+                // Default Clear All Credentials & SharedPreferences
+                editor.clear();
+                editor.commit();
+                auth.signOut();
+
                 // Create User into Firebase Authentication
                 auth.signInWithEmailAndPassword(emailInput.getText().toString().trim(),pwdInput.getText().toString().trim())
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
@@ -200,6 +220,20 @@ public class LoginActivity extends AppCompatActivity {
                                                 TextView msg = dialog.findViewById(R.id.msgDialog);
                                                 msg.setText("Login Successfully!!!");
                                                 dialog.show();
+
+
+                                                if(rememberMe.isChecked()){
+                                                    // If Remember Checked
+                                                    editor.putString("loginStatus","true");
+                                                    editor.putString("UID",UID);
+                                                    editor.commit();
+                                                } else {
+                                                    // If Remember Unchecked
+                                                    editor.putString("loginStatus","false");
+                                                    editor.putString("UID",UID);
+                                                    editor.commit();
+                                                }
+
                                                 new Handler().postDelayed(new Runnable() {
                                                     @Override
                                                     public void run() {
