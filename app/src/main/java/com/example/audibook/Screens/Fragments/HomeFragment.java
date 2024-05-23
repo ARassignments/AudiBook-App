@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.example.audibook.R;
 import com.example.audibook.Screens.DashboardActivity;
+import com.example.audibook.Screens.DetailActivity;
 import com.example.audibook.Screens.SeeMoreActivity;
 import com.example.audibook.Screens.SettingsActivity;
 
@@ -34,6 +35,12 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(inflater.getContext(), SettingsActivity.class));
+            }
+        });
+        view.findViewById(R.id.card1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(inflater.getContext(), DetailActivity.class));
             }
         });
         return view;

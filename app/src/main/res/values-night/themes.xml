@@ -110,7 +110,7 @@
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
         <item name="android:drawablePadding">12dp</item>
-        <item name="android:drawableTint">@color/primary_50</item>
+        <item name="android:drawableTint">@color/white</item>
     </style>
 
     <style name="ghostIconButton">
@@ -211,6 +211,12 @@
 
     <style name="appBarIcon">
         <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="appBarText">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_20</item>
     </style>
 
     <style name="horizontalRow">
@@ -369,6 +375,12 @@
         <item name="android:textColor">@color/neutral_5</item>
     </style>
 
+    <style name="settingsItemsTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_20</item>
+    </style>
+
     <style name="usernameTitle">
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">16sp</item>
@@ -404,6 +416,37 @@
 
     <style name="subscribePlatform">
         <item name="android:src">@drawable/device_dark</item>
+    </style>
+
+    <!--    Detail Page-->
+    <style name="detailBookTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="detailBookAuther">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_10</item>
+    </style>
+
+    <style name="detailBookRatingText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/neutral_20</item>
+    </style>
+
+    <style name="detailBookSubTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_5</item>
+    </style>
+
+    <style name="detailBookContent">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_20</item>
     </style>
 
 </resources>
