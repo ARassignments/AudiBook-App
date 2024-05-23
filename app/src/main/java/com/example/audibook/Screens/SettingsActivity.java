@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -18,10 +19,17 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.audibook.MainActivity;
 import com.example.audibook.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
 
 public class SettingsActivity extends AppCompatActivity {
 
     Button logoutBtn;
+    TextView profileName;
+    LinearLayout adminOptions;
+    static String UID = "";
+    SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
     @Override
@@ -32,9 +40,21 @@ public class SettingsActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        MainActivity.checkStatus(SettingsActivity.this);
-        profileName.setText(MainActivity.getName());
-        if(MainActivity.getRole().equals("admin")){
+        logoutBtn = findViewById(R.id.logoutBtn);
+        adminOptions = findViewById(R.id.adminOptions);
+        profileName = findViewById(R.id.profileName);
+
+        sharedPreferences = getSharedPreferences("myData",MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        if(!sharedPreferences.getString("UID","").equals("")){
+            UID = sharedPreferences.getString("UID","").toString();
+        }
+
+
+        MainActivity.checkStatus(SettingsActivity.this, UID);
+        profileName.setText(DashboardActivity.getName());
+        if(DashboardActivity.getRole().equals("admin")){
             adminOptions.setVisibility(View.VISIBLE);
         }
 
@@ -69,6 +89,13 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(SettingsActivity.this, UsersActivity.class));
+            }
+        });
+
+        findViewById(R.id.viewProfileBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SettingsActivity.this, ProfileActivity.class));
             }
         });
 

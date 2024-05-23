@@ -133,7 +133,9 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(Void unused) {
                                 dialog.dismiss();
-                                startActivity(new Intent(ForgetPasswordActivity.this, EmailSentActivity.class));
+                                Intent intent = new Intent(ForgetPasswordActivity.this, EmailSentActivity.class);
+                                intent.putExtra("userEmail",emailInput.getText().toString().trim());
+                                startActivity(intent);
                                 finish();
                             }
                         });

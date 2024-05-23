@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:paddingHorizontal="20dp"
+    android:paddingHorizontal="30dp"
     android:paddingTop="20dp"
     android:background="@color/transparent">
 
@@ -24,6 +24,7 @@
             style="@style/authLabel"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/boy_14"
@@ -48,7 +49,6 @@
                 android:layout_height="wrap_content"
                 android:text="Status"
                 style="@style/authLabel"/>
-
 
         </LinearLayout>
 
