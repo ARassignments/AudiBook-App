@@ -20,7 +20,7 @@
         <item name="lottie_url">https://lottie.host/a1c1ad77-414a-4ba2-a7c9-19913c99a8c7/oZRMjhS0p8.json</item>
     </style>
 
-    <!--    Buttons-->
+    <!--    Button-->
 
     <style name="flatButton">
         <item name="android:textAllCaps">false</item>
