@@ -449,4 +449,26 @@
         <item name="android:textColor">@color/neutral_20</item>
     </style>
 
+    <style name="detailBookReviewTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_5</item>
+    </style>
+
+    <style name="detailBookReviewRatingText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/neutral_20</item>
+    </style>
+
+    <style name="detailBookReviewRatingViewMoreText">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/accent_50</item>
+    </style>
+
+    <style name="detailBookReviewRatingIndicator">
+        <item name="android:tint">@color/neutral_80</item>
+    </style>
+
 </resources>
