@@ -1,6 +1,7 @@
 package com.example.audibook.Screens;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
@@ -248,6 +249,15 @@ public class UsersActivity extends AppCompatActivity {
             } else if(data.get(i).getStatus().equals("0")){
                 status.setText("Deactivated");
             }
+
+            listItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(context,UserProfileActivity.class);
+                    intent.putExtra("userId",data.get(i).getId());
+                    startActivity(intent);
+                }
+            });
 
             return customListItem;
         }
