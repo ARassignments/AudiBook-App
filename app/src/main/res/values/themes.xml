@@ -709,4 +709,32 @@
         <item name="android:tint">@color/neutral_20</item>
     </style>
 
+<!--    Player-->
+
+    <style name="playerBookAuther">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="playerBookTimer">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/primary_20</item>
+    </style>
+
+    <style name="playerBookIcon">
+        <item name="android:tint">@color/neutral_80</item>
+    </style>
+
+    <style name="playerBookBtn">
+        <item name="android:tint">@color/primary_50</item>
+    </style>
+
+    <style name="playerBookLabelText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
 </resources>
