@@ -196,7 +196,6 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(AuthResult authResult) {
 
-
                                 // Check Status From Firebase Realtime Database by UID
 
                                 // Get UID from Firebase Authentication
@@ -273,8 +272,6 @@ public class LoginActivity extends AppCompatActivity {
 
                                     }
                                 });
-
-
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
