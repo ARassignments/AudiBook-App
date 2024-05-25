@@ -499,4 +499,10 @@
         <item name="android:textColor">@color/primary_20</item>
     </style>
 
+    <!--    Books-->
+    <style name="booksAddBtn">
+        <item name="android:tint">@color/neutral_80</item>
+        <item name="android:backgroundTint">@color/neutral_20</item>
+    </style>
+
 </resources>

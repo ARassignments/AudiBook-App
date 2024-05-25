@@ -737,4 +737,10 @@
         <item name="android:textColor">@color/neutral_80</item>
     </style>
 
+<!--    Books-->
+    <style name="booksAddBtn">
+        <item name="android:tint">@color/white</item>
+        <item name="android:backgroundTint">@color/primary_50</item>
+    </style>
+
 </resources>
