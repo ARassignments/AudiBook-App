@@ -58,22 +58,16 @@ public class SettingsActivity extends AppCompatActivity {
             adminOptions.setVisibility(View.VISIBLE);
         }
 
-        findViewById(R.id.backBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        = findViewById(R.id.logoutBtn);
+        logoutBtn = findViewById(R.id.logoutBtn);
         adminOptions = findViewById(R.id.adminOptions);
         profileName = findViewById(R.id.profileName);
 
         sharedPreferences = getSharedPreferences("myData",MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
-
-        View.OnClickListener() {
+        findViewById(R.id.backBtn).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 SettingsActivity.super.onBackPressed();
             }
         });
