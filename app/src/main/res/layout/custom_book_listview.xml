@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingHorizontal="30dp"
+    android:paddingTop="20dp"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            app:cardElevation="@null"
+            app:cardCornerRadius="10dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/release_img_1" />
+
+                <ImageView
+                    android:id="@+id/editBtn"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/edit"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="top|end"
+                    android:elevation="5dp"
+                    app:tint="@color/neutral_80"
+                    android:padding="4dp"
+                    android:background="@drawable/onboarding_indicator_active"
+                    android:backgroundTint="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/delete"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_gravity="top|end"
+                    android:elevation="5dp"
+                    app:tint="@color/neutral_80"
+                    android:padding="4dp"
+                    android:background="@drawable/onboarding_indicator_active"
+                    android:backgroundTint="@color/white"/>
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/dashboardReleaseTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="The Black Witch"/>
+
+        <TextView
+            android:id="@+id/autherName"
+            style="@style/dashboardReleaseAuther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Laurie Forest"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -86,6 +86,13 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.booksBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SettingsActivity.this, BooksActivity.class));
+            }
+        });
+
         findViewById(R.id.viewProfileBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
