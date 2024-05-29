@@ -41,13 +41,13 @@
                 android:layout_marginTop="12dp"
                 style="@style/onBoardingContent"/>
 
-            <Button
-                android:id="@+id/finishBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Finish"
-                android:layout_marginTop="20dp"
-                style="@style/flatButton"/>
+        <Button
+            android:id="@+id/finishBtn"
+            style="@style/flatButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Finish" />
 
     </LinearLayout>
 

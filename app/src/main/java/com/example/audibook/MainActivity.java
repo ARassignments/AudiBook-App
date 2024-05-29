@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
     static String name, email, role, image, created_on;
 
     public static DatabaseReference db;
+
+    public static int getName() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
