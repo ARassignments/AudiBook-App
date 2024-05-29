@@ -50,31 +50,33 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("myData",MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
-        UID = sharedPreferences.getString("UID","").toString();
+
 
         if(db == null){
             FirebaseDatabase.getInstance().setPersistenceEnabled(true);
             db = FirebaseDatabase.getInstance().getReference();
         }
 
-        db.child("Users").child(UID).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if(snapshot.exists()){
-                    name = snapshot.child("name").getValue().toString();
-                    email = snapshot.child("email").getValue().toString();
-                    image = snapshot.child("image").getValue().toString();
-                    role = snapshot.child("role").getValue().toString();
-                    created_on = snapshot.child("created_on").getValue().toString();
+        if(!sharedPreferences.getString("UID","").equals("")){
+            UID = sharedPreferences.getString("UID","").toString();
+            db.child("Users").child(UID).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if(snapshot.exists()){
+                        name = snapshot.child("name").getValue().toString();
+                        email = snapshot.child("email").getValue().toString();
+                        image = snapshot.child("image").getValue().toString();
+                        role = snapshot.child("role").getValue().toString();
+                        created_on = snapshot.child("created_on").getValue().toString();
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
-
+                }
+            });
+        }
 
         Intent intent = new Intent(MainActivity.this, SplashScreenActivity.class);
         startActivity(intent);
@@ -109,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public static void checkStatus(Context context){
+    public static void checkStatus(Context context, String UID){
         db.child("Users").child(UID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -140,27 +142,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
-
-    // User Getter
-    public static String getName(){
-        return name;
-    }
-
-    public static String getEmail(){
-        return email;
-    }
-
-    public static String getImage(){
-        return image;
-    }
-
-    public static String getRole(){
-        return role;
-    }
-
-    public static String getCreatedOn(){
-        return created_on;
     }
 
 }

@@ -8,6 +8,15 @@
 
     <style name="Theme.AudiBook" parent="Base.Theme.AudiBook" />
 
+    <!-- Light Theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Other theme attributes -->
+        <item name="bottomNavCheckedIconTint">@color/bottom_nav_checked_icon_light</item>
+        <item name="bottomNavUncheckedIconTint">@color/bottom_nav_unchecked_icon_light</item>
+        <item name="bottomNavCheckedTitleColor">@color/bottom_nav_checked_title_light</item>
+        <item name="bottomNavUncheckedTitleColor">@color/bottom_nav_unchecked_title_light</item>
+    </style>
+
 <!--    Font Family Light-->
     <style name="light_48">
         <item name="android:fontFamily">@font/poppins_light</item>
@@ -376,6 +385,16 @@
         <item name="android:fontFamily">@font/poppins_medium</item>
     </style>
 
+<!--    Bottom Navigation Bar-->
+
+    <style name="BottomNavigationViewTextStyleActive">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
 <!--    OnBoarding-->
 
     <style name="onBoardingImg1">
@@ -416,6 +435,12 @@
 
     <style name="appBarIcon">
         <item name="android:tint">@color/neutral_80</item>
+    </style>
+
+    <style name="appBarText">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primary_50</item>
     </style>
 
     <style name="horizontalRow">
@@ -556,10 +581,33 @@
         <item name="android:textColor">@color/primary_50</item>
     </style>
 
+    <style name="dashboardGrandTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="dashboardCustomButtonText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
+    <style name="dashboardCustomButtonIcon">
+        <item name="android:tint">@color/neutral_80</item>
+    </style>
+
+
 <!--    Settings-->
 
     <style name="settingsItems">
         <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
+    <style name="settingsItemsTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/neutral_80</item>
     </style>
@@ -606,6 +654,93 @@
 
     <style name="subscribePlatform">
         <item name="android:src">@drawable/device</item>
+    </style>
+
+<!--    Detail Page-->
+    <style name="detailBookTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="detailBookAuther">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/neutral_50</item>
+    </style>
+
+    <style name="detailBookRatingText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/neutral_50</item>
+    </style>
+
+    <style name="detailBookSubTitle">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
+    <style name="detailBookContent">
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_60</item>
+    </style>
+
+    <style name="detailBookReviewTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
+    <style name="detailBookReviewRatingText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/neutral_50</item>
+    </style>
+
+    <style name="detailBookReviewRatingViewMoreText">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/accent_50</item>
+    </style>
+
+    <style name="detailBookReviewRatingIndicator">
+        <item name="android:tint">@color/neutral_20</item>
+    </style>
+
+<!--    Player-->
+
+    <style name="playerBookAuther">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="playerBookTimer">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/primary_20</item>
+    </style>
+
+    <style name="playerBookIcon">
+        <item name="android:tint">@color/neutral_80</item>
+    </style>
+
+    <style name="playerBookBtn">
+        <item name="android:tint">@color/primary_50</item>
+    </style>
+
+    <style name="playerBookLabelText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
+    </style>
+
+<!--    Books-->
+    <style name="booksAddBtn">
+        <item name="android:tint">@color/white</item>
+        <item name="android:backgroundTint">@color/primary_50</item>
     </style>
 
 </resources>
