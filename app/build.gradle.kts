@@ -27,6 +27,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    buildFeatures{
+        viewBinding = true;
+    }
 }
 
 dependencies {
@@ -38,10 +41,12 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(libs.lottie)
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
+    implementation("com.github.bumptech.glide:glide:5.0.0-rc01")
 }

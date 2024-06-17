@@ -32,7 +32,6 @@ public class UserProfileActivity extends AppCompatActivity {
 
     TextView nameText, emailText, createdOnText, roleText;
     static String UID = "";
-
     Button activateBtn, deactivateBtn;
 
     @Override

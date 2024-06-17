@@ -385,6 +385,33 @@
         <item name="android:fontFamily">@font/poppins_medium</item>
     </style>
 
+    <style name="inputTextMaterial" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="endIconTint">@color/neutral_20</item>
+        <item name="errorEnabled">true</item>
+        <item name="counterEnabled">true</item>
+        <item name="counterTextColor">@color/neutral_40</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="helperTextTextColor">@color/neutral_40</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxStrokeColor">@color/primary_50</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="boxStrokeErrorColor">@color/accent_50</item>
+        <item name="boxBackgroundColor">@color/neutral_5</item>
+        <item name="hintEnabled">true</item>
+        <item name="android:textColorHint">@color/neutral_40</item>
+    </style>
+
+    <style name="inputTextEditMaterial">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/neutral_80</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
 <!--    Bottom Navigation Bar-->
 
     <style name="BottomNavigationViewTextStyleActive">
@@ -423,6 +450,11 @@
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_in_top</item>
         <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="DialogAnimationBottom">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_out</item>
     </style>
     
 <!--    App Bar-->
@@ -632,6 +664,14 @@
         <item name="android:textColor">@color/primary_50</item>
     </style>
 
+    <style name="strokeBgColor">
+        <item name="android:backgroundTint">#EEEEEE</item>
+    </style>
+
+    <style name="bottomDialogBg">
+        <item name="android:background">@drawable/bottom_dialog_bg</item>
+    </style>
+
 <!--    Subscribe-->
 
     <style name="subscribeTitle">
@@ -741,6 +781,28 @@
     <style name="booksAddBtn">
         <item name="android:tint">@color/white</item>
         <item name="android:backgroundTint">@color/primary_50</item>
+    </style>
+
+    <style name="searchLabelText">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/neutral_30</item>
+    </style>
+
+    <style name="searchText">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/accent_50</item>
+    </style>
+
+    <style name="notFoundImage">
+        <item name="android:src">@drawable/not_found_frame</item>
+    </style>
+
+    <style name="notFoundMessageText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/neutral_80</item>
     </style>
 
 </resources>
