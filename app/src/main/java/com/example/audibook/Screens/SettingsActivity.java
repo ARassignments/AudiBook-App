@@ -1,9 +1,14 @@
 package com.example.audibook.Screens;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -95,12 +100,38 @@ public class SettingsActivity extends AppCompatActivity {
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editor.clear();
-                editor.commit();
-                FirebaseAuth auth = FirebaseAuth.getInstance();
-                auth.signOut();
-                startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
-                finish();
+                Dialog dialog = new Dialog(SettingsActivity.this);
+                dialog.setContentView(R.layout.dialog_bottom_logout);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimationBottom;
+                dialog.getWindow().setGravity(Gravity.BOTTOM);
+                dialog.setCanceledOnTouchOutside(false);
+                dialog.setCancelable(false);
+                Button cancelBtn, yesBtn;
+                cancelBtn = dialog.findViewById(R.id.cancelBtn);
+                yesBtn = dialog.findViewById(R.id.yesBtn);
+                dialog.show();
+
+                yesBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        editor.clear();
+                        editor.commit();
+                        FirebaseAuth auth = FirebaseAuth.getInstance();
+                        auth.signOut();
+                        startActivity(new Intent(SettingsActivity.this, LoginActivity.class));
+                        finish();
+                    }
+                });
+
+                cancelBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
             }
         });
 
