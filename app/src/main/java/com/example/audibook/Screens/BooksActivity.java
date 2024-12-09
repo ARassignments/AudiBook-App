@@ -660,4 +660,5 @@ public class BooksActivity extends AppCompatActivity {
             return bookItem;
         }
     }
+
 }
